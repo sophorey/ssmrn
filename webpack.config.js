@@ -1,15 +1,16 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build/'),
   },
-  watch: true,
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
+        test: /\.(scss|css)$/,
         use: [
           'style-loader',
           'css-loader',
@@ -29,5 +30,17 @@ module.exports = {
         ]
       }
     ],
+
   },
+  plugins: [new HtmlWebpackPlugin({
+    template: path.resolve(__dirname, "src/index.html")
+  })],
+  devtool: "source-map",
+  devServer: {
+    static: { directory: path.resolve(__dirname, "build/") },
+    hot: true
+  },
+  stats: {
+    errorDetails: true
+  }
 };
