@@ -1,5 +1,5 @@
 .main-wrapper {
-  max-width: var(--lg-screen);
+  max-width: var(--breakpoint-xlarge);
   margin: 0 auto;
-  padding: 30px;
+  padding: var(--padding-small);
 }

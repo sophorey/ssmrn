@@ -1,3 +1,29 @@
 #nav {
-  @include color-typography(invert);
+  ul {
+    display: flex;
+    li {
+      a {
+        transition: background-color var(--duration-menu) ease-in-out;
+        padding: var(--padding-small) var(--padding-large);
+        background-color: var(--color-invert-bg);
+        color: var(--color-invert-fg);
+        text-transform: uppercase;
+        display: block;
+        font-size: 0.8rem;
+        font-weight: var(--weight-bold);
+        outline: none;
+      }
+    }
+    li.active {
+      a {
+        background-color: var(--color-invert-accent);
+      }
+    }
+    li:hover {
+      a {
+        transition: background-color var(--duration-menu) ease-in-out;
+        background-color: var(--color-invert-accent);
+      }
+    }
+  }
 }

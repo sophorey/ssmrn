@@ -1,48 +1,15 @@
-@mixin color-typography($p: null) {
-  @if $p != null {
-    color: _palette($p, fg);
-  }
+body {
+  color: var(--color-fg);
+}
 
-  input,
-  select,
-  textarea {
-    color: _palette($p, fg);
-  }
+a {
+  color: var(--color-fg-bold);
+  border-bottom: dotted 1px;
+  border-bottom-color: var(--color-main-border);
+  text-decoration: none;
 
-  a {
-    color: _palette($p, fg);
-    border-bottom-color: transparentize(_palette($p, fg), 0.5);
-
-    &:hover {
-      border-bottom-color: transparent;
-      color: _palette($p, accent);
-    }
-  }
-
-  strong,
-  b {
-    color: _palette($p, fg-bold);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: _palette($p, fg-bold);
-  }
-
-  blockquote {
-    border-left-color: _palette($p, border);
-  }
-
-  code {
-    background: _palette($p, border-bg);
-    border-color: _palette($p, border);
-  }
-
-  hr {
-    border-bottom-color: _palette($p, border);
+  &:hover {
+    border-bottom-color: transparent;
+    color: var(--color-accent);
   }
 }

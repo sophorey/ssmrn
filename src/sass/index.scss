@@ -1,12 +1,13 @@
 // libs
-@use "libs/vars";
+@use "libs/_breakpoints";
+@use "libs/_vars.scss";
 
 // base
-@use "base/reset";
-
-
+@use "base/_reset";
+@use "base/_typography";
 // components
-
 
 // layout
 @use "layout/_header";
+@use "layout/_nav";
+@use "layout/_nav";

@@ -1,28 +1,50 @@
-$palette: (
-  bg: #ffffff,
-  fg: #212931,
-  fg-bold: #212931,
-  fg-light: mix(#212931, #ffffff, 50%),
-  border: mix(#dcdcdc, #ffffff, 50%),
-  border-bg: rgba(#dcdcdc, 0.25),
-  accent: #18bfef,
-  alt: (
-    bg: #f5f5f5,
-    fg: #717981,
-    fg-bold: #717981,
-    fg-light: mix(#717981, #f5f5f5, 50%),
-    border: mix(#dcdcdc, #f5f5f5, 75%),
-    border-bg: rgba(#dcdcdc, 0.5),
-    accent: #18bfef,
-  ),
-  invert: (
-    bg: #1e252d,
-    bg-alt: #1e252d,
-    fg: #ffffff,
-    fg-bold: #ffffff,
-    fg-light: rgba(#ffffff, 0.5),
-    border: #ffffff,
-    border-bg: rgba(#ffffff, 0.075),
-    accent: #18bfef,
-  ),
-);
+:root {
+  /// colors
+  --color-bg: #ffffff;
+  --color-fg: #212931;
+  --color-fg-bold: #212931;
+  --color-fg-light: mix(#212931, #ffffff, 50%);
+  --color-border: mix(#dcdcdc, #ffffff, 50%);
+  --color-border-bg: rgba(#dcdcdc, 0.25);
+  --color-accent: #18bfef;
+
+  --color-alt-bg: #f5f5f5;
+  --color-alt-fg: #717981;
+  --color-alt-fg-bold: #717981;
+  --color-alt-fg-light: mix(#717981, #f5f5f5, 50%);
+  --color-alt-border: mix(#dcdcdc, #f5f5f5, 75%);
+  --color-alt-border-bg: rgba(#dcdcdc, 0.5);
+  --color-alt-accent: #18bfef;
+
+  --color-invert-bg: #1e252d;
+  --color-invert-bg-alt: #1e252d;
+  --color-invert-fg: #ffffff;
+  --color-invert-fg-bold: #ffffff;
+  --color-invert-fg-light: rgba(#ffffff, 0.5);
+  --color-invert-border: #ffffff;
+  --color-invert-border-bg: rgba(#ffffff, 0.075);
+  --color-invert-accent: #18bfef;
+
+  // sizes
+  --padding-small: 2rem;
+  --padding-medium: 3rem;
+  --padding-large: 4rem;
+  --padding-xlarge: 5rem;
+  --padding-default: 7rem;
+
+  // breakpoints
+  --breakpoint-xxsmall: 0px;
+  --breakpoint-xsmall: 361px;
+  --breakpoint-small: 481px;
+  --breakpoint-medium: 737px;
+  --breakpoint-large: 981px;
+  --breakpoint-xlarge: 1281px;
+  --breakpoint-default: 1681px;
+
+  // fonts
+  --weight-bold: 700;
+
+  // duration
+  --duration-menu: 0.35s;
+  --duration-transition: 0.2s;
+}
