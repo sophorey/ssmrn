@@ -1,17 +1,21 @@
 #nav {
+  position: relative;
+  min-height: 4.9rem;
+  background-color: var(--color-invert-bg);
+  width: 100%;
   ul {
     display: flex;
     li {
       a {
         transition: background-color var(--duration-menu) ease-in-out;
         padding: var(--padding-small) var(--padding-large);
-        background-color: var(--color-invert-bg);
         color: var(--color-invert-fg);
         text-transform: uppercase;
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.875rem;
         font-weight: var(--weight-bold);
         outline: none;
+        line-height: 1;
       }
     }
     li.active {
@@ -23,6 +27,16 @@
       a {
         transition: background-color var(--duration-menu) ease-in-out;
         background-color: var(--color-invert-accent);
+      }
+    }
+  }
+}
+
+body.is-nav-panel-visible {
+  #nav {
+    ul {
+      li {
+        display: none;
       }
     }
   }

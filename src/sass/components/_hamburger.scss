@@ -1,0 +1,33 @@
+.hamburger {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.hamburger__bar {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform-origin: center;
+  stroke: var(--color-invert-fg);
+  stroke-width: 10%;
+}
+.hamburger__bar--top {
+  transform: translateY(-40%);
+}
+
+.hamburger__bar--bot {
+  transform: translateY(40%);
+}
+
+body.is-nav-panel-visible {
+  .hamburger__bar--top {
+    transform: rotate(45deg);
+  }
+
+  .hamburger__bar--mid {
+    transform: scaleX(0.1);
+  }
+
+  .hamburger__bar--bot {
+    transform: rotate(135deg);
+  }
+}

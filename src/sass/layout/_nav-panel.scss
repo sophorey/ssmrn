@@ -1,0 +1,60 @@
+@use "../libs/breakpoints";
+
+#nav {
+  #navPanelToggle {
+    top: 2rem;
+    left: 1rem;
+    position: absolute;
+    color: var(--color-invert-fg);
+    z-index: 10004;
+    @include breakpoints.xxs {
+      display: block;
+    }
+    @include breakpoints.sm {
+      display: none;
+    }
+  }
+}
+#navPanel {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: -20rem;
+
+  ul {
+    padding-top: 7rem;
+    max-width: 100%;
+    width: 18em;
+    text-align: center;
+    background-color: var(--color-invert-bg);
+    transition: transform var(--duration-transition) ease-in-out;
+
+    li {
+      a {
+        padding: var(--padding-small) var(--padding-large);
+        color: var(--color-invert-fg);
+        text-transform: uppercase;
+        border-bottom: none;
+        display: block;
+      }
+    }
+    li.active {
+      background-color: var(--color-invert-accent);
+    }
+  }
+}
+
+body.is-nav-panel-visible {
+  z-index: 10003;
+  background-color: var(--color-alt-bg);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  #navPanel {
+    ul {
+      transition: transform var(--duration-transition) ease-in-out;
+      transform: translateX(20rem);
+    }
+  }
+}

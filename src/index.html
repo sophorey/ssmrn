@@ -14,9 +14,19 @@
         referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="is-nav-panel-visible">
     <div class="main-wrapper">
         <nav id="nav">
+            <a id="navPanelToggle" href="#" class="icon">
+                <svg class="hamburger">
+                    <line x1="0" y1="50%" x2="100%" y2="50%"
+                        class="hamburger__bar hamburger__bar--top" />
+                    <line x1="0" y1="50%" x2="100%" y2="50%"
+                        class="hamburger__bar hamburger__bar--mid" />
+                    <line x1="0" y1="50%" x2="100%" y2="50%"
+                        class="hamburger__bar hamburger__bar--bot" />
+                </svg>
+            </a>
             <ul>
                 <li class="active">
                     <a class="nav__a nav__a_active"
@@ -37,6 +47,28 @@
                 </li>
             </ul>
         </nav>
+        <div id="navPanel" class="inactive">
+
+            <ul>
+                <li class="active">
+                    <a class="nav__a nav__a_active"
+                        href="#">
+                        home</a>
+                </li>
+                <li>
+                    <a class="nav__a" href="#">
+                        portfolio</a>
+                </li>
+                <li>
+                    <a class="nav__a" href="#">
+                        about
+                        us</a>
+                </li>
+                <li><a class="nav__a" href="#">
+                        contact</a>
+                </li>
+            </ul>
+        </div>
         <header id="header" class="header">
             <article class="welcome">
                 <header>
