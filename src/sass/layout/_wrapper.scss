@@ -1,9 +1,12 @@
 @use "./../libs/breakpoints";
 
-.main-wrapper {
-  max-width: var(--breakpoint-xlarge);
-  margin: 0 auto;
-  padding: var(--padding-small);
+.wrapper {
+  width: 100%;
+
+  > * {
+    max-width: var(--breakpoint-xlarge);
+    margin: 0 auto;
+  }
 
   @include breakpoints.xxs {
     padding: 0 var(--padding-small) 0 var(--padding-small);

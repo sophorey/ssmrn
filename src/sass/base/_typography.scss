@@ -29,6 +29,7 @@ input,
 select,
 textarea {
   color: var(--color-fg);
+  font-family: var(--family-heading);
 }
 
 body {
@@ -58,6 +59,7 @@ h6 {
   font-weight: var(--weight-bold);
   line-height: 1.65;
   margin: 0 0 calc(var(--margin-element) * 0.5) 0;
+  font-family: var(--family-heading);
 }
 
 h1 {

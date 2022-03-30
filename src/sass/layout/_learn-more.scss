@@ -1,0 +1,66 @@
+@use "../libs/breakpoints";
+
+#learn-more {
+  display: grid;
+  padding-top: var(--padding-xlarge);
+  column-gap: var(--padding-xlarge);
+  border-bottom: solid 2px;
+  border-color: var(--color-invert-border-light);
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    li {
+      i {
+        font-size: 2rem;
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  @include breakpoints.xxs {
+    grid-template-columns: repeat(1, 1fr);
+    .button {
+      margin: 0 auto;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      padding-top: var(--padding-medium);
+    }
+  }
+
+  @include breakpoints.xs {
+    .button {
+      margin: 0 auto;
+    }
+    ul {
+      padding-top: var(--padding-medium);
+    }
+  }
+
+  @include breakpoints.md {
+    grid-template-columns: repeat(2, 1fr);
+    header {
+      grid-column: 1/2;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    ul {
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding-top: var(--padding-medium);
+    }
+    .button {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  .button {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+}

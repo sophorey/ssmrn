@@ -11,7 +11,7 @@
   --color-alt-bg: #f5f5f5;
   --color-alt-fg: #717981;
   --color-alt-fg-bold: #717981;
-  --color-alt-fg-light: mix(#, #f5f5f5, 50%);
+  --color-alt-fg-light: transparentize(#f5f5f5, 0.5);
   --color-alt-border: mix(#dcdcdc, #f5f5f5, 75%);
   --color-alt-border-bg: rgba(#dcdcdc, 0.5);
   --color-alt-accent: #18bfef;
@@ -23,6 +23,7 @@
   --color-invert-fg-bold: #ffffff;
   --color-invert-fg-light: rgba(#bdbdbd, 0.5);
   --color-invert-border: #ffffff;
+  --color-invert-border-light: #ececec;
   --color-invert-border-bg: rgba(#ffffff, 0.075);
   --color-invert-accent: #18bfef;
 
@@ -48,6 +49,9 @@
   // fonts
   --weight-bold: 700;
   --letter-spacing: 0.025em;
+  --family: "Merriweather', Georgia, serif";
+  --family-heading: "Source Sans Pro", Helvetica, sans-serif;
+  --family-fixed: "Courier New", monospace;
 
   // duration
   --duration-menu: 0.35s;
