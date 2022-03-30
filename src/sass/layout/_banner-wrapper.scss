@@ -1,0 +1,30 @@
+@use "../libs/breakpoints";
+#banner-wrapper {
+  min-height: 80vh;
+  background-color: var(--color-invert-bg-light);
+  width: 100%;
+
+  .banner {
+    width: 100%;
+    max-width: var(--breakpoint-xlarge);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  @include breakpoints.xxs {
+    padding: 0 var(--padding-small) 0 var(--padding-small);
+  }
+
+  @include breakpoints.sm {
+    padding: 0 var(--padding-medium) 0 var(--padding-medium);
+  }
+  @include breakpoints.md {
+    padding: 0 var(--padding-medium) 0 var(--padding-medium);
+  }
+
+  @include breakpoints.lg {
+    padding: 0 var(--padding-xlarge) 0 var(--padding-xlarge);
+  }
+}

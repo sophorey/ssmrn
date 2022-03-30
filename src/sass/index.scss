@@ -10,9 +10,13 @@
 // components
 @use "components/icon";
 @use "components/hamburger";
+@use "components/image";
+@use "components/button";
 
 // layout
 @use "layout/_header";
 @use "layout/_nav";
 @use "layout/_main-wrapper";
 @use "layout/_nav-panel";
+@use "layout/welcome";
+@use "layout/banner-wrapper";

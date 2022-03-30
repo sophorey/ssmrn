@@ -1,27 +1,36 @@
+@use "../libs/breakpoints";
+
 #nav {
   position: relative;
   min-height: 4.9rem;
   background-color: var(--color-invert-bg);
+  margin: 0 auto;
   width: 100%;
   ul {
     display: flex;
+    justify-content: center;
     li {
+      align-items: center;
       a {
         transition: background-color var(--duration-menu) ease-in-out;
         padding: var(--padding-small) var(--padding-large);
         color: var(--color-invert-fg);
         text-transform: uppercase;
-        display: block;
         font-size: 0.875rem;
         font-weight: var(--weight-bold);
         outline: none;
-        line-height: 1;
+        display: block;
+      }
+
+      @include breakpoints.xxs {
+        display: none;
+      }
+      @include breakpoints.sm {
+        display: flex;
       }
     }
     li.active {
-      a {
-        background-color: var(--color-invert-accent);
-      }
+      background-color: var(--color-invert-accent);
     }
     li:hover {
       a {

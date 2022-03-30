@@ -1,3 +1,36 @@
+@use "../libs/breakpoints";
+
+html {
+  font-size: 16pt;
+
+  @include breakpoints.lg {
+    font-size: 14pt;
+  }
+
+  @include breakpoints.md {
+    font-size: 13pt;
+  }
+
+  @include breakpoints.sm {
+    font-size: 12pt;
+  }
+
+  @include breakpoints.xs {
+    font-size: 11pt;
+  }
+
+  @include breakpoints.xxs {
+    font-size: 10pt;
+  }
+}
+
+body,
+input,
+select,
+textarea {
+  color: var(--color-fg);
+}
+
 body {
   color: var(--color-fg);
 }
@@ -7,9 +40,56 @@ a {
   border-bottom: dotted 1px;
   border-bottom-color: var(--color-main-border);
   text-decoration: none;
+  letter-spacing: 0.075rem;
 
   &:hover {
     border-bottom-color: transparent;
     color: var(--color-accent);
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-fg-bold);
+  font-weight: var(--weight-bold);
+  line-height: 1.65;
+  margin: 0 0 calc(var(--margin-element) * 0.5) 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.35em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+p {
+  margin-bottom: var(--margin-element);
+}
+
+body,
+input,
+select,
+textarea {
+  font-size: 1rem;
+  line-height: 2.375;
 }

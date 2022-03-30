@@ -1,0 +1,16 @@
+.image {
+  border: 0;
+  width: 100%;
+  &.fit {
+    width: 100%;
+  }
+  &.main {
+    margin: var(--margin-element);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

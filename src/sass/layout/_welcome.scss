@@ -1,0 +1,58 @@
+@use "../libs/breakpoints";
+
+#welcome {
+  width: 100%;
+  display: grid;
+  grid-column-gap: calc(var(--padding-large));
+  .image {
+    margin-bottom: var(--margin-element);
+    img {
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    }
+  }
+  .button {
+    max-width: 15rem;
+    margin: 0 auto;
+    margin-bottom: var(--margin-element);
+  }
+
+  @include breakpoints.xxs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include breakpoints.md {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: calc(var(--padding-large)) 0 calc(var(--padding-large)) 0;
+
+    > h1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    > p {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    > .button {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .image {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      justify-self: end;
+    }
+  }
+
+  @include breakpoints.md {
+    padding: calc(var(--padding-large) * 2) 0 calc(var(--padding-large) * 2) 0;
+  }
+}

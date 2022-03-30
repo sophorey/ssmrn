@@ -27,7 +27,7 @@
     width: 18em;
     text-align: center;
     background-color: var(--color-invert-bg);
-    transition: transform var(--duration-transition) ease-in-out;
+    transition: transform var(--duration-transition) ease;
 
     li {
       a {
@@ -53,7 +53,7 @@ body.is-nav-panel-visible {
   left: 0;
   #navPanel {
     ul {
-      transition: transform var(--duration-transition) ease-in-out;
+      transition: transform var(--duration-transition) ease;
       transform: translateX(20rem);
     }
   }
