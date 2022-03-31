@@ -17,4 +17,19 @@ header {
   h6 + p {
     font-size: 0.9rem;
   }
+
+  &.underlined {
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    p:after {
+      content: "";
+      margin-top: 2rem;
+      width: 8.125rem;
+      height: 2px;
+      background-color: var(--color-accent);
+    }
+  }
 }

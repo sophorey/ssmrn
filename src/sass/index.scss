@@ -13,6 +13,8 @@
 @use "components/image";
 @use "components/button";
 @use "components/inner-header";
+@use "components/grid";
+@use "components/form";
 
 // layout
 @use "layout/_header";
@@ -25,3 +27,4 @@
 @use "layout/wrapper";
 @use "layout/features";
 @use "layout/team";
+@use "layout/call-to-action";

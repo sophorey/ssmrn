@@ -42,10 +42,12 @@ a {
   border-bottom-color: var(--color-main-border);
   text-decoration: none;
   letter-spacing: 0.075rem;
+  transition: color 0.5s ease, border-bottom-color 0.5s ease;
 
   &:hover {
     border-bottom-color: transparent;
     color: var(--color-accent);
+    transition: color 0.5s ease, border-bottom-color 0.5s ease;
   }
 }
 
@@ -94,4 +96,8 @@ select,
 textarea {
   font-size: 1rem;
   line-height: 2.375;
+}
+
+p {
+  // margin: 0;
 }
