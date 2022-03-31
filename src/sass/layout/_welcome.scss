@@ -4,6 +4,8 @@
   width: 100%;
   display: grid;
   grid-column-gap: calc(var(--padding-large));
+  align-items: center;
+
   .image {
     margin-bottom: var(--margin-element);
     img {

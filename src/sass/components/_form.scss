@@ -2,21 +2,11 @@ form {
   display: flex;
   flex-direction: column;
 
-  fieldset {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    > *:first-child {
-      grid-column: 1/4;
-    }
-    > *:last-child {
-      grid-column: 4/5;
-    }
-  }
-
   input[type="email"],
   input[type="text"],
   input[type="password"],
-  input[type="tel"] {
+  input[type="tel"],
+  textarea {
     text-transform: none;
     color: var(--color-fg);
     background-color: var(--color-invert-fg);

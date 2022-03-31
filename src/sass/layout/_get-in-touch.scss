@@ -1,0 +1,88 @@
+@use "../libs/breakpoints";
+
+#get-in-touch {
+  .grid {
+    padding: 4rem 0 4rem 0;
+    display: grid;
+    grid-gap: 2rem;
+
+    header {
+      h2 {
+        text-transform: uppercase;
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 1rem;
+
+      fieldset {
+        display: flex;
+        flex: 0 0 auto;
+        & > *:first-child {
+          margin-right: 1rem;
+          flex: 1 1 auto;
+        }
+        & > *:last-child {
+          flex: 1 1 auto;
+        }
+      }
+      textarea {
+        flex: 1 0 auto;
+        min-height: 20rem;
+        width: 100%;
+      }
+      button {
+        flex: 0 0 auto;
+      }
+
+      input,
+      textarea {
+        background-color: var(--color-alt-fg);
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: var(--color-fg-light);
+      }
+    }
+
+    .split {
+      background-color: var(--color-invert-bg);
+      color: var(--color-invert-fg);
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 0 4rem 0;
+      h3 {
+        color: inherit;
+        text-transform: uppercase;
+      }
+      a {
+        color: inherit;
+      }
+    }
+    @include breakpoints.xxs {
+      grid-template-columns: 1fr;
+    }
+    @include breakpoints.md {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+
+      header {
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+      form {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+      section {
+        grid-row: 2/3;
+        grid-column: 2/3;
+      }
+    }
+  }
+}

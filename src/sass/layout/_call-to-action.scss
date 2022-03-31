@@ -4,5 +4,15 @@
 
   .grid {
     justify-content: center;
+    fieldset {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      > *:first-child {
+        grid-column: 1/4;
+      }
+      > *:last-child {
+        grid-column: 4/5;
+      }
+    }
   }
 }
