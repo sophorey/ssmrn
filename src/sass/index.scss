@@ -12,6 +12,7 @@
 @use "components/hamburger";
 @use "components/image";
 @use "components/button";
+@use "components/inner-header";
 
 // layout
 @use "layout/_header";
@@ -22,3 +23,4 @@
 @use "layout/banner-wrapper";
 @use "layout/learn-more";
 @use "layout/wrapper";
+@use "layout/features";

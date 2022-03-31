@@ -7,6 +7,13 @@
   &.main {
     margin: var(--margin-element);
   }
+  &.square {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   img {
     display: block;

@@ -1,0 +1,54 @@
+@use "../libs/breakpoints";
+
+#features {
+  padding: 4rem 0 4rem 0;
+
+  header {
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+    }
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    p:after {
+      content: "";
+      margin-top: 2rem;
+      width: 8.125rem;
+      height: 2px;
+      background-color: var(--color-accent);
+    }
+  }
+
+  ul.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      a {
+        font-family: var(--family-heading);
+        font-weight: var(--weight-bold);
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        padding: 0 1.25rem;
+      }
+      &.active {
+        a {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  ul.gallery {
+    display: grid;
+    gap: 1.5rem;
+
+    @include breakpoints.lg {
+      grid-template-columns: repeat(4, 305.25px);
+      grid-template-rows: repeat(2, 305.25px);
+    }
+  }
+}
