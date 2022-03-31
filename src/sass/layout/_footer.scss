@@ -1,3 +1,27 @@
+@use "../libs/breakpoints";
+
 #footer {
   padding: 4rem 0 4rem 0;
+  color: var(--color-invert-fg);
+  background-color: var(--color-invert-bg);
+
+  .grid {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoints.xxs {
+      flex-direction: column;
+    }
+
+    @include breakpoints.md {
+      flex-direction: row;
+    }
+
+    .icons {
+      a {
+        color: var(--color-fg);
+        background-color: var(--color-bg);
+      }
+    }
+  }
 }
