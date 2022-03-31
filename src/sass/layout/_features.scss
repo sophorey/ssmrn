@@ -45,10 +45,16 @@
   ul.gallery {
     display: grid;
     gap: 1.5rem;
+    justify-content: center;
 
+    @include breakpoints.sm {
+      grid-template-columns: repeat(2, 19.078125rem);
+    }
+    @include breakpoints.md {
+      grid-template-columns: repeat(3, 19.078125rem);
+    }
     @include breakpoints.lg {
-      grid-template-columns: repeat(4, 305.25px);
-      grid-template-rows: repeat(2, 305.25px);
+      grid-template-columns: repeat(4, 19.078125rem);
     }
   }
 }
