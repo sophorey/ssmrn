@@ -8,6 +8,7 @@
   .grid {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 
     @include breakpoints.xxs {
       flex-direction: column;
