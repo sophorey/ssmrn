@@ -6,6 +6,7 @@
   background-color: var(--color-invert-bg);
   margin: 0 auto;
   width: 100%;
+
   ul {
     display: flex;
     justify-content: center;
@@ -13,7 +14,7 @@
       align-items: center;
       a {
         transition: background-color var(--duration-menu) ease-in-out;
-        padding: var(--padding-small) var(--padding-large);
+        padding: calc(var(--padding-small) * 1.25) var(--padding-small);
         color: var(--color-invert-fg);
         text-transform: uppercase;
         font-size: 0.875rem;

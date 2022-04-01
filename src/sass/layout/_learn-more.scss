@@ -62,5 +62,9 @@
   .button {
     background-color: transparent;
     color: var(--color-accent);
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-invert-fg);
+    }
   }
 }
