@@ -7,11 +7,10 @@
     "build": "webpack",
     "start": "webpack serve --stats-children"
   },
-  "dependencies": {
+  "devDependencies": {
     "css-loader": "^6.7.1",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
-    "node-sass": "^7.0.1",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
